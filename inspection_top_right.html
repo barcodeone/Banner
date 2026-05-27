@@ -41,7 +41,10 @@
 </head>
 <body>
     <a href="https://kklabel.co.kr/" target="_blank">
-        <img src="https://barcodeone.github.io/Banner/kklabel_banner.png" alt="KingKong Label Shop" />
+        <img id="bannerImg" alt="KingKong Label Shop" />
     </a>
+    <script>
+        document.getElementById('bannerImg').src = 'https://barcodeone.github.io/Banner/kklabel_banner.png?t=' + new Date().getTime();
+    </script>
 </body>
 </html>

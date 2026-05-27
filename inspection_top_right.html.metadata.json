@@ -1,0 +1,5 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_OTHER",
+  "summary":  "Set body background color to WPF header blue color (#1e88e5) in inspection_top_right.html to camouflage and eliminate white corner artifacts",
+  "updatedAt":  "2026-05-27T05:15:47.237165800Z"
+}

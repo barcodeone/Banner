@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>Xprinter Banner</title>
+    <title>Xprinter Live Banner</title>
     <style>
         * {
             margin: 0;
@@ -16,33 +16,49 @@
             overflow: hidden !important;
             width: 100% !important;
             height: 100% !important;
-            background-color: transparent !important;
+            background-color: #ffffff !important;
         }
-        a {
-            display: block;
+        .banner-container {
+            position: relative;
             width: 100%;
             height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        /* 실시간 홈페이지의 왼쪽 상단 로고 영역을 크롭하여 최적 비율로 스케일링 */
+        iframe {
+            position: absolute;
+            top: -15px; /* 상단 빈 여백 스크롤 보정 */
+            left: -20px; /* 왼쪽 빈 여백 스크롤 보정 */
+            width: 500px;
+            height: 180px;
+            border: none !important;
+            outline: none !important;
+            pointer-events: none; /* iframe 내부 마우스 상호작용 차단 */
+            transform: scale(0.48); /* 240x80 배너 규격에 정확히 맞춤 */
+            transform-origin: 0 0;
+            background-color: #ffffff;
+        }
+        /* 클릭 시 공식 사이트로 새창 이동하게 해주는 투명 링크 */
+        .click-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            background: transparent;
+            cursor: pointer;
             text-decoration: none;
             outline: none;
-        }
-        img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-            border: 0 !important; /* IE 테두리 제거 */
-            outline: none;
-            cursor: pointer;
-            transition: opacity 0.2s ease;
-        }
-        img:hover {
-            opacity: 0.95;
         }
     </style>
 </head>
 <body>
-    <a href="https://smartstore.naver.com/xprinter" target="_blank">
-        <img src="https://barcodeone.github.io/Banner/xprinter_banner.png" alt="" />
-    </a>
+    <div class="banner-container">
+        <!-- Mixed Content 보안 차단을 차단하기 위해 https 보안 주소 사용 -->
+        <iframe src="https://xprinter.co.kr" scrolling="no" frameborder="0"></iframe>
+        <a class="click-link" href="https://xprinter.co.kr" target="_blank" title="한국 엑스프린터 공식 쇼핑몰 바로가기"></a>
+    </div>
 </body>
 </html>

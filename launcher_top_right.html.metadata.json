@@ -1,5 +1,5 @@
 {
   "artifactType":  "ARTIFACT_TYPE_OTHER",
-  "summary":  "시작페이지 우측 상단 Xprinter 배너 HTML 신규 생성 및 절대경로 이미지 바인딩",
-  "updatedAt":  "2026-05-26T09:32:07.050024100Z"
+  "summary":  "xprinter.co.kr의 로고가 위치하는 왼쪽 상단 영역을 실시간으로 가져와 배너에 노출하고, 클릭 시 해당 사이트로 연결해주는 iframe 크롭 기반 라이브 배너로 교체",
+  "updatedAt":  "2026-05-26T10:09:39.773226300Z"
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+<!-- saved from url=(0014)about:internet -->
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>광고 모집 배너</title>
+    <title>(주)가온 웍스 배너</title>
     <style>
         * {
             margin: 0;
@@ -19,80 +20,77 @@
             overflow: hidden !important;
             width: 100%;
             height: 100%;
-            background-color: #F8FAFC !important; /* 부모 웰 카드 배경인 #F8FAFC와 완벽 동화하여 모서리 흰색 삐침 방지 */
+            background-color: transparent !important;
         }
         .banner-card {
             display: flex;
             align-items: center;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #FFFFFF 0%, #FAF5FF 60%, #EFE5FF 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, #F5F7FF 60%, #E8EFFF 100%);
             border-radius: 8px;
             padding: 0 14px;
             text-decoration: none;
             transition: all 0.2s ease-in-out;
             user-select: none;
-            border: 1px solid #E2D0FF;
+            border: 1px solid #D2E3FC;
+            cursor: pointer;
         }
         .banner-card:hover {
-            filter: brightness(0.97);
-            border-color: #C899FF;
+            filter: brightness(0.98);
+            border-color: #AECBFA;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            transform: translateY(-1px);
         }
         .icon-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            background-color: #F3EBFF;
+            width: 32px;
+            height: 32px;
+            background-color: #E8F0FE;
             border-radius: 50%;
             margin-right: 12px;
-            flex-shrink: 0;
-            border: 1px solid #DFCAFF;
+            transition: transform 0.2s ease;
         }
-        .icon-container svg {
-            width: 20px;
-            height: 20px;
-            fill: #7C3AED;
+        .banner-card:hover .icon-container {
+            transform: scale(1.05);
+        }
+        .icon-svg {
+            width: 18px;
+            height: 18px;
+            fill: #1976D2;
         }
         .text-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            overflow: hidden;
         }
         .title {
             font-size: 13.5px;
             font-weight: 700;
-            color: #7C3AED;
-            line-height: 1.3;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            color: #1976D2;
+            margin-bottom: 2px;
         }
-        .desc {
+        .subtitle {
             font-size: 10.5px;
             font-weight: 500;
-            color: #64748B;
-            margin-top: 2px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            color: #4285F4;
         }
     </style>
 </head>
 <body>
-    <a class="banner-card" href="mailto:kim@endream.com?subject=[광고 및 제휴 문의]" title="광고 및 제휴 제안하기">
+    <div class="banner-card" onclick="alert('(주)가온 웍스\n컨테이너하우스, 이동식화장실 제작 및 납품\n\n연락처: 031-768-3366')">
         <div class="icon-container">
-            <!-- 메가폰/확성기 SVG 아이콘 -->
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm2 15h-4v-2h4v2zm0-4h-4v-4h4v4z"/>
+            <svg class="icon-svg" viewBox="0 0 24 24">
+                <!-- Home / Construction Icon -->
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
             </svg>
         </div>
         <div class="text-container">
-            <div class="title">광고 제휴 및 파트너 모집</div>
-            <div class="desc">kim@endream.com</div>
+            <span class="title">(주)가온 웍스</span>
+            <span class="subtitle">컨테이너하우스, 이동식화장실 제작 및 납품 (031-768-3366)</span>
         </div>
-    </a>
+    </div>
 </body>
 </html>
